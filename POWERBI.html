@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sweet Insights - AWESOME CHOCOLATES</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://media-hosting.imagekit.io/3c8a9fcdec124ef5/a57872d636e641177805154c8466e7d0.jpg?Expires=1839883619&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wmi5pfEWm4-XNzZAk3vgrPz6asWTQXIYH9Q8xrW4WFYHf46JqzKf2a~wC6Z8LgVnwk-8zPMSJ5OufMe72fHhgCcareSLr7mdDTsBg~7mcrzn1eFmRdk4-n3KYGF5dIaXC7BTouL8UzDRHhrNPjJ2k4-gd79LdJ50Za11DEOrcmsbLcMF~feobHO5MDPkFCpQk-f7i9svkOhHv-COmzr38iNaJ0mBCGFiGb9CdtxHkpFLPr0X~g8xSaqCGDC4T309MtVQBUO9567U6B0fZmZzzfZ7RBJl-JK~8ozBW8mhqmWOUjqE1ow2xbzeT029MhaR~DxBoP5icXZ5qTG57tJGJw__');
+background-size: cover;
+background-position: center;
+      background-repeat: no-repeat;
+      color: white; /* Changed text color to white */
+      line-height: 1.6;
+      padding-top: 70px;
+      background-attachment: fixed;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      z-index: -1;
+    }
+    header {
+      
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+      color: white; /* Ensuring header text is white */
+      border-bottom: 2px solid #ffccd5;
+    }
+    nav {
+      
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+      color: white; /* Ensuring navigation links are white */
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 8px 16px;
+      background-color: #f78da7;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      
+    }
+    .page-section {
+      padding: 50px 20px;
+      text-align: center;
+      min-height: 100vh;
+     
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .page-section:nth-child(even) {
+      
+    }
+    h2 {
+      font-size: 2rem;
+      color: white; /* Ensuring section headings are white */
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: white; /* Ensuring paragraph text is white */
+    }
+    .form-group {
+      margin: 10px 0;
+    }
+    input {
+      padding: 10px;
+      width: 250px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+    }
+    button {
+      background-color: #ff69b4;
+      color: pink;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      
+    }
+    iframe {
+      width: 90%;
+      height: 500px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+    footer {
+      
+      text-align: center;
+      padding: 20px;
+      font-size: 1rem;
+      color: white; /* Ensuring footer text is white */
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay"></div> <!-- Overlay for background dimming -->
+
+  <header>🍫 Sweet Insights AWESOME CHOCOLATES</header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#register">Register</a>
+    <a href="#login">Login</a>
+    <a href="#project-overview" class="hidden">Project Overview</a>
+    <a href="#dashboard1" class="hidden">Dashboard 1</a>
+    <a href="#dashboard2" class="hidden">Dashboard 2</a>
+    <a href="#dashboard3" class="hidden">Dashboard 3</a>
+    <a href="#dashboard4" class="hidden">Dashboard 4</a>
+    <a href="#thankyou">Thank You</a>
+    <a href="#" onclick="handleLogout()">Logout</a>
+  </nav>
+
+  <div class="page-section" id="about">
+    <h2>About Us</h2>
+    <p>At Sweet Insights - AWESOME CHOCOLATES, we specialize in blending the irresistible world of chocolates with the power of data analytics. Our mission is to turn your love for sweets into actionable business insights by visualizing trends, customer preferences, and sales data. Whether it's tracking best-selling truffles or exploring seasonal demand for caramels, our interactive dashboards reveal the delicious secrets behind successful chocolate sales. With a sprinkle of innovation and a dash of sweetness, we help businesses make smarter, tastier decisions.!</p>
+  </div>
+
+  <div class="page-section" id="register">
+    <h2>Register</h2>
+    <div class="form-group"><input id="reg-name" type="text" placeholder="Full Name" /></div>
+    <div class="form-group"><input id="reg-email" type="email" placeholder="Email Address" /></div>
+    <div class="form-group"><input id="reg-pass" type="password" placeholder="Create Password" /></div>
+    <button onclick="handleRegister()">Register</button>
+    <p id="reg-msg"></p>
+  </div>
+
+  <div class="page-section" id="login">
+    <h2>Login</h2>
+    <div class="form-group"><input id="login-user" type="text" placeholder="Email" /></div>
+    <div class="form-group"><input id="login-pass" type="password" placeholder="Password" /></div>
+    <button onclick="handleLogin()">Login</button>
+    <p id="login-msg"></p>
+  </div>
+
+  <!-- Hidden until login -->
+  <div class="page-section hidden" id="project-overview">
+    <h2>Project Overview</h2>
+    <p>The **Awesome Chocolates Sales** project leverages advanced data processing and visualization tools to optimize sales strategies and performance analysis. Through a detailed workflow and data abstraction process, the project transforms raw sales data into actionable insights by defining clear targets and actions. A variety of visualization tools, including donut charts, treemaps, funnel charts, line charts, and scatter plots, provide dynamic views of product profitability, sales by geography, costs vs. profits, and salesperson performance. The project also utilizes storytelling through data to guide decision-making, with key metrics presented in intuitive visual formats. The overall goal is to deliver data-driven insights that enhance sales, profitability, and business decision-making processes, supported by references and methodologies for credibility.This dashboard-driven website explores chocolate sales, customer preferences, and trends using real-time data visualizations built with Power BI.</p>
+  </div>
+
+  <div class="page-section hidden" id="dashboard1">
+    <h2>Dashboard 1: Chocolate Sales Overview</h2>
+    <iframe title="data visualisation" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiOGVmYTI1YTAtOWU2OC00OThjLThlOWYtYTc0NTg1NzViYjBiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9&pageName=5ecd275c60f415fbbcbf"></iframe>
+  </div>
+
+  <div class="page-section hidden" id="dashboard2">
+    <h2>Dashboard 2: Product Popularity</h2>
+    <iframe title="data visualisation" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiOGVmYTI1YTAtOWU2OC00OThjLThlOWYtYTc0NTg1NzViYjBiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9&pageName=a0379530779170221b05"></iframe>
+  </div>
+
+  <div class="page-section hidden" id="dashboard3">
+    <h2>Dashboard 3: Customer Preferences</h2>
+    <iframe title="data visualisation" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiOGVmYTI1YTAtOWU2OC00OThjLThlOWYtYTc0NTg1NzViYjBiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9&pageName=d0fe10dbffcab4f01e5a"></iframe>
+  </div>
+
+  <div class="page-section hidden" id="dashboard4">
+    <h2>Dashboard 4: Sales by Region</h2>
+    <iframe title="data visualisation" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiOGVmYTI1YTAtOWU2OC00OThjLThlOWYtYTc0NTg1NzViYjBiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9&pageName=cd77648060774fa6c527"></iframe>
+  </div>
+
+  
+  <div class="page-section" id="thankyou">
+    <h2>Thank You</h2>
+    <p>We appreciate your visit to Sweet Insights!</p>
+  </div>
+
+  <footer>🍬 &copy; 2025 Sweet Insights - Candy Co.</footer>
+
+  <script>
+    const users = {};
+
+    function handleRegister() {
+      const name = document.getElementById("reg-name").value;
+      const email = document.getElementById("reg-email").value;
+      const pass = document.getElementById("reg-pass").value;
+
+      if (name && email && pass) {
+        users[email] = { name, pass };
+        document.getElementById("reg-msg").innerText = "Registration successful!";
+      } else {
+        document.getElementById("reg-msg").innerText = "Please fill all fields.";
+      }
+    }
+
+    function handleLogin() {
+      const email = document.getElementById("login-user").value;
+      const pass = document.getElementById("login-pass").value;
+
+      if (users[email] && users[email].pass === pass) {
+        document.getElementById("login-msg").innerText = "Login successful!";
+        showProjectOverview();
+        showDashboards();
+      } else {
+        document.getElementById("login-msg").innerText = "Invalid credentials!";
+      }
+    }
+
+    function handleLogout() {
+      document.getElementById("project-overview").classList.add("hidden");
+      document.getElementById("dashboard1").classList.add("hidden");
+      document.getElementById("dashboard2").classList.add("hidden");
+      document.getElementById("dashboard3").classList.add("hidden");
+      document.getElementById("dashboard4").classList.add("hidden");
+      document.getElementById("login-msg").innerText = "";
+    }
+
+    function showProjectOverview() {
+      document.getElementById("project-overview").classList.remove("hidden");
+    }
+
+    function showDashboards() {
+      document.querySelectorAll('.hidden').forEach(el => {
+        el.classList.remove('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
